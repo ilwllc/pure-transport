@@ -1,6 +1,9 @@
-__version__ = '0.2.0'
+import traceback
+
+__version__ = '0.2.1.ILW'
 
 try:
     from .factory import transport_factory
-except ImportError:
-    pass
+except ImportError as ex:
+    print(f'{ex.args[0]}')
+    print(''.join(traceback.TracebackException.from_exception(ex).format()))

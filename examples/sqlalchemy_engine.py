@@ -11,4 +11,4 @@ engine = create_engine('hive://username@/default',
                        connect_args={'thrift_transport': transport})
 result = engine.execute("select * from table limit 1")
 
-print result.fetchall()
+print(result.fetchall())
